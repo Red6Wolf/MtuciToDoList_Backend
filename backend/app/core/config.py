@@ -20,4 +20,5 @@ class Settings(BaseSettings):
     class Config: 
         case_sensitive = True
         
-settings = Settings
+settings = Settings()
+project_name = settings.PROJECT_NAME
