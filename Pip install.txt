@@ -1,0 +1,12 @@
+cd backend
+python -m virtualenv env
+
+env\Scripts\activate - windows
+
+source env\bin\activate - mac os  
+
+pip install fastapi "unicorn[standart]" 
+
+pip install uvicorn
+
+uvicorn app.app:app --reload                       
