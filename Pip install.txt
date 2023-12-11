@@ -1,26 +1,14 @@
-<<<<<<< HEAD
 cd backend
 python -m virtualenv env
 
-env\Scripts\activate - windows
+env/Scripts/activate - windows
 
-source env\bin\activate - mac os  
+source env/bin/activate - mac os  
 
-pip install fastapi "unicorn[standart]" 
+pip install fastapi
 
-pip install uvicorn
-
-=======
-cd backend
-python -m virtualenv env
-
-env\Scripts\activate - windows
-
-source env\bin\activate - mac os  
-
-pip install fastapi "unicorn[standart]" 
+pip install "uvicorn[standard]"
 
 pip install uvicorn
 
->>>>>>> Win
 uvicorn app.app:app --reload                       
