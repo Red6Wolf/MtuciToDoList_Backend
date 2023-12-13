@@ -1,4 +1,7 @@
 cd backend
+
+pip install requirements.txt
+
 python -m virtualenv env
 
 env/Scripts/activate - windows
