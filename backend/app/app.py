@@ -4,9 +4,8 @@ from motor.motor_asyncio import AsyncIOMotorClient
 
 #local
 from app.core.config import settings
-
-#Local
 from app.models.user_model import User
+from app.api.api_v1.router import router
 
 
 app = FastAPI(
@@ -30,3 +29,4 @@ async def app_init():
         ]
     )
     
+app.include_router(router, prefix=settings.API_V1_STR)
