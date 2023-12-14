@@ -1,5 +1,5 @@
 from typing import List
-from pydantic.v1 import BaseSettings, AnyHttpUrl
+from pydantic import BaseSettings, AnyHttpUrl
 from decouple import config
 
 class Settings(BaseSettings):
