@@ -1,16 +1,17 @@
 from beanie import Document, Indexed 
+from typing import Optional
 from uuid import UUID, uuid4
 from pydantic import Field, EmailStr
 from datetime import datetime
 
 class User(Document):
     user_id: UUID = Field(default_factory=uuid4)
-    username: str = Indexed(str, unique = True)
+    username: Indexed(str, unique = True)
     email: Indexed( EmailStr, unique = True)
     hashed_password: str
-    first_name: str
-    last_name: str
-    disable: bool
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+    disable: Optional[bool] = None
     
     def __repr__(self) -> str:
         return f"<User {self.email}>"
