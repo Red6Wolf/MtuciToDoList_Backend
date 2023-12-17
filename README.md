@@ -24,10 +24,9 @@ after
 cd backend
 pip install -r requirements.txt
 
-
+#For Win
 env/Scripts/activate
-
-
+#For Mac
 source env/bin/activate
 
 uvicorn app.app:app --reload
